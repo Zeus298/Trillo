@@ -1,0 +1,106 @@
+.container {
+    max-width: 120rem;   
+    //Test
+    // min-height: 50rem; 
+
+    margin: 8rem auto; 
+    background-color: var(--color--grey-light-2); 
+    box-shadow: 0 2rem 4rem rgba(0,0,0,0.4); 
+
+    @media only screen and (max-width: $bp-largest) {
+        margin: 0; 
+        max-width: 100%; 
+        width: 100%;
+    }
+   
+} 
+
+.header { 
+
+    font-size: 1.4rem;
+    height: 7rem;
+    background-color: #fff; 
+    border: 1px solid var(--color--grey-light-2);
+
+    display: flex; 
+    justify-content: space-between;// Main Axis 
+    align-items: center; // Across Axis 
+
+    @media only screen and (max-width: $bp-smallest) { 
+        height: 12rem;
+        flex-wrap: wrap; 
+        align-content: space-around; 
+    }
+} 
+
+.content {
+    display: flex; 
+
+    @media only screen and (max-width: $bp-medium) {
+      flex-direction: column;
+    }
+} 
+
+.side-bar {
+    background-color: var(--color--grey-dark-1); 
+    flex: 0 0 18%; //flex-grow flex-shirk flex-basis --> width cho phần side bar = 18% tổng 
+
+    display: flex;  
+    flex-direction: column; 
+    justify-content: space-between;
+}
+
+
+.hotel-view {
+    flex-grow: 1; //Còn lại sẽ width hotel-view chiếm toàn bộ phần còn lại  
+
+    //Dung de test phan side-bar
+    // height: 80rem; 
+} 
+
+.detail {
+    display: flex; 
+    padding: 4.5rem; 
+    background-color: var(--color--grey-light-1); 
+    border-bottom:  1px solid var(--color--grey-dark-1);  
+    font-size: 1.4rem; 
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 3rem;
+    } 
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+    }
+   
+} 
+
+.desc {
+    
+    flex: 0 0 60%; 
+    margin-right: 4.5rem; 
+    box-shadow: 0 2rem 5rem rgba(0,0,0,0.6); 
+    padding: 3rem; 
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem; 
+        margin-right: 3rem;
+    } 
+
+    @media only screen and (max-width: $bp-small) {
+       margin: 0; 
+       padding: 3rem;
+    }
+} 
+
+.user-review {
+     flex: 1; 
+
+     display: flex; 
+     flex-direction: column;
+     align-items: center;  
+
+     @media only screen and (max-width: $bp-small) {
+        margin-top: 3rem;
+     }
+}
